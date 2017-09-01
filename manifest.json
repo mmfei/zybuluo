@@ -1,0 +1,27 @@
+{ 
+    "manifest_version": 2, 
+        "name": "zybuluoExtension", 
+        "version": "1.0", 
+        "description": "这是针对作业部落这个网站www.zybuluo.com做的扩展，目的是加宽分享的页面的宽度。跟作者提议过，但是他好像还没加，自己来了。", 
+        "icons": {
+            "16": "logo.png",
+            "64": "logo.png",
+            "128": "logo.png"
+        },
+        "browser_action": { 
+            "default_icon": "logo.png" 
+        }, 
+        "permissions": [ 
+            "http://*/", 
+        "bookmarks", 
+        "tabs", 
+        "history" 
+            ] , 
+        "content_scripts": [ 
+        { 
+            "matches": ["https://www.zybuluo.com/*"], 
+            "css": ["mystyles.css"], 
+            "js": ["zybuluo.js"] 
+        } 
+    ] 
+}
